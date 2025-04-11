@@ -1,10 +1,10 @@
 import tkinter as tk
-import util
 import cv2
 from PIL import Image, ImageTk
 import os.path
 import subprocess
 import datetime
+import util
 
 class App:
     def __init__(self):
@@ -39,7 +39,7 @@ class App:
         self.process_webcam()
     
     def process_webcam(self):
-        ret, frame= self.cap.read()
+        frame= self.cap.read()
 
         self.most_recent_capture_arr= frame
 
@@ -118,5 +118,4 @@ class App:
         self.main_window.destroy()
 
 if __name__ == '__main__':
-    app= App()
-    app.start()
+    
